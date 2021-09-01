@@ -1,0 +1,4 @@
+[settings]
+RunAsAdmin = 0
+CleanTempFolder = 0
+DebugMode = 0
