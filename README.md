@@ -6,8 +6,8 @@ Convert android apps for W10M Astoria build.
 * Windows 10 PC
 * APK package targeting API 19 or lower
 
-### Known Issues
-- Some APK files can't be processed well by this tool and will fail to convert, one of the reasons this happens is if the icon is a PNG or an Android Vector Graphic
+### Note
+Some of the converted appx may not work or crashes on launch due to astoria limitations.
 
 ### Screenshots
 ![Apk2Appx Converter](https://user-images.githubusercontent.com/66063294/131654296-cb46f14c-9f2b-485c-a02e-d83269e854cd.png)
