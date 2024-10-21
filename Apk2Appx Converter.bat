@@ -123,6 +123,7 @@ echo.&echo Generating Assets...
 for /f "skip=1 delims=" %%a in ('certutil -hashfile "%APK%" MD5') do set "Hash=%%a"&goto Generating_Manifest
 :Generating_Manifest
 echo.&echo Generating Manifest...
+set "Hash=%Hash: =%"
 echo>"%CD%\Temp\ManifestGen.vbs" Set objFS = CreateObject("Scripting.FileSystemObject")
 echo>>"%CD%\Temp\ManifestGen.vbs" strFile = "%CD%\Agent\Templates\AppxManifest.xml"
 echo>>"%CD%\Temp\ManifestGen.vbs" Set objFile = objFS.OpenTextFile(strFile)
