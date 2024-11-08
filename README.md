@@ -1,19 +1,15 @@
 # Apk2Appx Converter
-Convert android apps for W10M Astoria build.
-
+Convert android apps for W10M Astoria builds.
 
 ### Requirements
-* Windows 10 PC
+* Windows 10 or higher
 * APK package targeting API 19 or lower
 
 ### Note
 Some of the converted appx may not work or crashes on launch due to astoria limitations.
 
 ### Screenshots
-![Apk2Appx Converter](https://user-images.githubusercontent.com/66063294/131654296-cb46f14c-9f2b-485c-a02e-d83269e854cd.png)
-<br/>
-<br/>
-![Apk2Appx Converter](https://user-images.githubusercontent.com/66063294/131654313-485ebc1e-7651-4381-b257-2b429a030d10.png)
+<img src="https://github.com/user-attachments/assets/5eb667d2-505b-48e3-a5fe-0c53dda15aa1" width="700" height="404" alt="Apk2Appx Converter">
 
 ### Credits
 * Microsoft
