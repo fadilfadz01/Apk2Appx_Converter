@@ -66,7 +66,7 @@ echo [35m█[0m[35m█[0m║     [35m█[0m[35m█[0m║   [35m█[0m
 echo [35m█[0m[35m█[0m║     [35m█[0m[35m█[0m║   [35m█[0m[35m█[0m║[35m█[0m[35m█[0m║╚[35m█[0m[35m█[0m╗[35m█[0m[35m█[0m║╚[35m█[0m[35m█[0m╗ [35m█[0m[35m█[0m╔╝[35m█[0m[35m█[0m╔══╝  [35m█[0m[35m█[0m╔══[35m█[0m[35m█[0m╗   [35m█[0m[35m█[0m║   [35m█[0m[35m█[0m╔══╝  [35m█[0m[35m█[0m╔══[35m█[0m[35m█[0m╗
 echo ╚[35m█[0m[35m█[0m[35m█[0m[35m█[0m[35m█[0m[35m█[0m╗╚[35m█[0m[35m█[0m[35m█[0m[35m█[0m[35m█[0m[35m█[0m╔╝[35m█[0m[35m█[0m║ ╚[35m█[0m[35m█[0m[35m█[0m[35m█[0m║ ╚[35m█[0m[35m█[0m[35m█[0m[35m█[0m╔╝ [35m█[0m[35m█[0m[35m█[0m[35m█[0m[35m█[0m[35m█[0m[35m█[0m╗[35m█[0m[35m█[0m║  [35m█[0m[35m█[0m║   [35m█[0m[35m█[0m║   [35m█[0m[35m█[0m[35m█[0m[35m█[0m[35m█[0m[35m█[0m[35m█[0m╗[35m█[0m[35m█[0m║  [35m█[0m[35m█[0m║
 echo  ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝  ╚═══╝  ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═╝
-echo [33mVersion 2.4.2.0
+echo [33mVersion 2.4.3.0
 echo Copyright (c) 2024 by @fadilfadz01 ^& @Empyreal96
 echo https://github.com/fadilfadz01/Apk2Appx_Converter
 echo.[0m
@@ -308,7 +308,11 @@ echo>>"%CD%\Temp\ManifestGen.vbs"   If InStr(strLine, "%%Hash%%") ^> 0 Then
 echo>>"%CD%\Temp\ManifestGen.vbs"       strLine = Replace(strLine, "%%Hash%%", "%Hash%")
 echo>>"%CD%\Temp\ManifestGen.vbs"   End If
 echo>>"%CD%\Temp\ManifestGen.vbs"   If InStr(strLine, "%%Capabilities%%") ^> 0 Then
-echo>>"%CD%\Temp\ManifestGen.vbs"       strLine = Replace(strLine, "%%Capabilities%%", "%Capabilities:^=%")
+if defined Capabilities (
+    echo>>"%CD%\Temp\ManifestGen.vbs"       strLine = Replace(strLine, "%%Capabilities%%", "%Capabilities:^=%"^)
+) else (
+    echo>>"%CD%\Temp\ManifestGen.vbs"       strLine = Replace(strLine, "%%Capabilities%%", ""^)
+)
 echo>>"%CD%\Temp\ManifestGen.vbs"   End If
 echo>>"%CD%\Temp\ManifestGen.vbs"   WScript.Echo strLine
 echo>>"%CD%\Temp\ManifestGen.vbs" Loop
